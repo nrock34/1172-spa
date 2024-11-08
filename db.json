@@ -1,7 +1,7 @@
 {
     "questions": [
         {
-            "questionId": 1,
+            "id": 1,
             "text": "Which data structure is best suited for implementing a LIFO (Last In, First Out) system?",
             "type": "multipleChoice",
             "options": [
@@ -14,7 +14,7 @@
             "explanation": "A stack operates on the principle of Last In, First Out (LIFO)."
         },
         {
-            "questionId": 2,
+            "id": 2,
             "text": "In Python, what is the correct syntax for defining a function?",
             "type": "multipleChoice",
             "options": [
@@ -27,7 +27,7 @@
             "explanation": "Python uses the 'def' keyword to define functions."
         },
         {
-            "questionId": 3,
+            "id": 3,
             "text": "What is the time complexity of a binary search algorithm?",
             "type": "multipleChoice",
             "options": [
@@ -40,7 +40,7 @@
             "explanation": "Binary search operates in O(log n) time complexity by dividing the search space in half with each iteration."
         },
         {
-            "questionId": 4,
+            "id": 4,
             "text": "Which of these languages is primarily used for web development?",
             "type": "multipleChoice",
             "options": [
@@ -53,7 +53,7 @@
             "explanation": "HTML is a markup language used to create web pages."
         },
         {
-            "questionId": 6,
+            "id": 6,
             "text": "Which keyword in Java is used to create a new object?",
             "type": "multipleChoice",
             "options": [
@@ -66,7 +66,7 @@
             "explanation": "In Java, 'new' is used to instantiate objects."
         },
         {
-            "questionId": 7,
+            "id": 7,
             "text": "What is the primary purpose of the 'for' loop in programming?",
             "type": "multipleChoice",
             "options": [
@@ -79,7 +79,7 @@
             "explanation": "The 'for' loop is often used when the number of iterations is known."
         },
         {
-            "questionId": 8,
+            "id": 8,
             "text": "Which of the following is a characteristic of a linked list?",
             "type": "multipleChoice",
             "options": [
@@ -92,7 +92,7 @@
             "explanation": "Linked lists allow sequential access to their elements."
         },
         {
-            "questionId": 10,
+            "id": 10,
             "text": "Which sorting algorithm has the best average-case time complexity?",
             "type": "multipleChoice",
             "options": [
@@ -105,7 +105,7 @@
             "explanation": "Merge sort has an average-case time complexity of O(n log n), which is efficient compared to other algorithms listed."
         },
         {
-            "questionId": 11,
+            "id": 11,
             "text": "Which HTTP method is used to update a resource on the server?",
             "type": "multipleChoice",
             "options": [
@@ -118,7 +118,7 @@
             "explanation": "The PUT method is commonly used to update a resource on the server."
         },
         {
-            "questionId": 12,
+            "id": 12,
             "text": "What will be the output of the following Python code: print(3 * 'hello')?",
             "type": "multipleChoice",
             "options": [
@@ -131,77 +131,77 @@
             "explanation": "In Python, multiplying a string by a number repeats the string."
         },
         {
-            "questionId": 1,
+            "id": 13,
             "text": "What data structure uses LIFO (Last In, First Out) order?",
             "type": "textResponse",
             "correctAnswer": "Stack",
             "explanation": "A stack follows the Last In, First Out principle."
         },
         {
-            "questionId": 2,
+            "id": 14,
             "text": "What keyword in Python is used to define a function?",
             "type": "textResponse",
             "correctAnswer": "def",
             "explanation": "The 'def' keyword is used to declare functions in Python."
         },
         {
-            "questionId": 4,
+            "id": 15,
             "text": "Which programming language is known for use in web browsers?",
             "type": "textResponse",
             "correctAnswer": "JavaScript",
             "explanation": "JavaScript is widely used for client-side web development."
         },
         {
-            "questionId": 5,
+            "id": 16,
             "text": "What keyword in Java is used to create an instance of an object?",
             "type": "textResponse",
             "correctAnswer": "new",
             "explanation": "The 'new' keyword in Java is used to instantiate objects."
         },
         {
-            "questionId": 6,
+            "id": 17,
             "text": "Which sorting algorithm has the best average-case time complexity?",
             "type": "textResponse",
             "correctAnswer": "MergeSort",
             "explanation": "MergeSort has an average time complexity of O(n log n)."
         },
         {
-            "questionId": 8,
+            "id": 18,
             "text": "What protocol is commonly used to transfer web pages?",
             "type": "textResponse",
             "correctAnswer": "HTTP",
             "explanation": "HTTP, or HyperText Transfer Protocol, is used to transfer web pages."
         },
         {
-            "questionId": 9,
+            "id": 19,
             "text": "What symbol is used to comment a line in Python?",
             "type": "textResponse",
             "correctAnswer": "#",
             "explanation": "The '#' symbol is used for single-line comments in Python."
         },
         {
-            "questionId": 10,
+            "id": 20,
             "text": "What acronym represents a type of unique identifier in databases?",
             "type": "textResponse",
             "correctAnswer": "UUID",
             "explanation": "UUID stands for Universally Unique Identifier, commonly used in databases."
         },
         {
-            "questionId": 11,
+            "id": 21,
             "text": "What is the term for a blueprint of an object in OOP?",
             "type": "textResponse",
             "correctAnswer": "Class",
             "explanation": "A class defines the structure and behavior of objects in object-oriented programming."
         },
         {
-            "questionId": 12,
+            "id": 22,
             "text": "What keyword is used in Java to inherit from a superclass?",
             "type": "textResponse",
             "correctAnswer": "extends",
             "explanation": "The 'extends' keyword in Java indicates that a class is inheriting from a superclass."
         },
         {
-            "questionId": 13,
+            "id": 23,
             "text": "What data type represents true or false values?",
             "type": "textResponse",
             "correctAnswer": "Boolean",
