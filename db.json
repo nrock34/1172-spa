@@ -192,32 +192,6 @@
             "explanation": "Database management is not typically a function of the operating system."
         },
         {
-            "questionId": 14,
-            "text": "Which JavaScript method is used to remove the last element from an array?",
-            "type": "multipleChoice",
-            "options": [
-                "A. push()",
-                "B. pop()",
-                "C. shift()",
-                "D. splice()"
-            ],
-            "correctAnswer": "B. pop()",
-            "explanation": "The pop() method removes the last element from an array."
-        },
-        {
-            "questionId": 15,
-            "text": "Which keyword is used in C++ to prevent a variable's value from being modified?",
-            "type": "multipleChoice",
-            "options": [
-                "A. static",
-                "B. const",
-                "C. final",
-                "D. volatile"
-            ],
-            "correctAnswer": "B. const",
-            "explanation": "The 'const' keyword in C++ prevents modification of a variable's value after it is set."
-        },
-        {
             "questionId": 1,
             "text": "What data structure uses LIFO (Last In, First Out) order?",
             "type": "textResponse",
