@@ -92,19 +92,6 @@
             "explanation": "Linked lists allow sequential access to their elements."
         },
         {
-            "questionId": 9,
-            "text": "What does SQL stand for?",
-            "type": "multipleChoice",
-            "options": [
-                "A. Standard Query Language",
-                "B. Structured Query Language",
-                "C. Sequential Query Language",
-                "D. Syntax Query Language"
-            ],
-            "correctAnswer": "B. Structured Query Language",
-            "explanation": "SQL stands for Structured Query Language and is used for managing databases."
-        },
-        {
             "questionId": 10,
             "text": "Which sorting algorithm has the best average-case time complexity?",
             "type": "multipleChoice",
@@ -144,19 +131,6 @@
             "explanation": "In Python, multiplying a string by a number repeats the string."
         },
         {
-            "questionId": 13,
-            "text": "Which of the following is NOT a primary function of an operating system?",
-            "type": "multipleChoice",
-            "options": [
-                "A. Process management",
-                "B. Network management",
-                "C. Memory management",
-                "D. Database management"
-            ],
-            "correctAnswer": "D. Database management",
-            "explanation": "Database management is not typically a function of the operating system."
-        },
-        {
             "questionId": 1,
             "text": "What data structure uses LIFO (Last In, First Out) order?",
             "type": "textResponse",
@@ -169,13 +143,6 @@
             "type": "textResponse",
             "correctAnswer": "def",
             "explanation": "The 'def' keyword is used to declare functions in Python."
-        },
-        {
-            "questionId": 3,
-            "text": "What is the time complexity of binary search in Big O notation?",
-            "type": "textResponse",
-            "correctAnswer": "O(log n)",
-            "explanation": "Binary search operates with a time complexity of O(log n)."
         },
         {
             "questionId": 4,
@@ -197,13 +164,6 @@
             "type": "textResponse",
             "correctAnswer": "MergeSort",
             "explanation": "MergeSort has an average time complexity of O(n log n)."
-        },
-        {
-            "questionId": 7,
-            "text": "Which keyword is used to prevent modification of a variable in C++?",
-            "type": "textResponse",
-            "correctAnswer": "const",
-            "explanation": "The 'const' keyword in C++ prevents a variable from being modified."
         },
         {
             "questionId": 8,
