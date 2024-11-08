@@ -2,28 +2,6 @@
     "questions": [
         {
             "questionId": 1,
-            "text": "In the programming language Java, what is the proper way to declare an integer variable?",
-            "type": "multipleChoice",
-            "options": [
-                "A. var num = 0;",
-                "B. Integer = 0;",
-                "C. int num = 0;",
-                "D. int num = new int(5);"
-            ],
-            "correctAnswer": "C. int num = 0;",
-            "explanation": ""
-        },
-        {
-            "questionId": 2,
-            "text": "What is the output of this code? System.out.println(\"Hi!\")",
-            "type": "textResponse",
-            "correctAnswer": "",
-            "explanation": ""
-        },
-
-        
-        {
-            "questionId": 1,
             "text": "Which data structure is best suited for implementing a LIFO (Last In, First Out) system?",
             "type": "multipleChoice",
             "options": [
