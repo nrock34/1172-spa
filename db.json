@@ -247,6 +247,5 @@
             "correctAnswer": "Boolean",
             "explanation": "The Boolean data type is used in SQL to store true or false values."
         }
-    
     ]
 }
