@@ -75,19 +75,6 @@
             "explanation": "HTML is a markup language used to create web pages."
         },
         {
-            "questionId": 5,
-            "text": "In object-oriented programming, what is 'inheritance'?",
-            "type": "multipleChoice",
-            "options": [
-                "A. A way to allocate memory dynamically",
-                "B. A mechanism by which one class acquires the properties of another",
-                "C. The process of defining a new class as an exact copy of another class",
-                "D. A way to store data in classes"
-            ],
-            "correctAnswer": "B. A mechanism by which one class acquires the properties of another",
-            "explanation": "Inheritance allows a class to inherit attributes and methods from another class."
-        },
-        {
             "questionId": 6,
             "text": "Which keyword in Java is used to create a new object?",
             "type": "multipleChoice",
