@@ -64,9 +64,8 @@
                 {imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdYmNMl7sIuE3_zekAtL60wRtW_FrodgeG8g&s",
                 answerId: 3},
                 {imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3S9FqOWEjqGZPQ98L55jzxu9OXbJqwXx_Gw&s",
-                answerId: 4},
-               
-                            ],
+                answerId: 4}
+               ],
             "correctAnswer": 3,
             "explanation": "This is the correct logo"
         },
