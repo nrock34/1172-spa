@@ -1,0 +1,313 @@
+{
+    "questions": [
+        {
+            "questionId": 1,
+            "text": "In the programming language Java, what is the proper way to declare an integer variable?",
+            "type": "multipleChoice",
+            "options": [
+                "A. var num = 0;",
+                "B. Integer = 0;",
+                "C. int num = 0;",
+                "D. int num = new int(5);"
+            ],
+            "correctAnswer": "C. int num = 0;",
+            "explanation": ""
+        },
+        {
+            "questionId": 2,
+            "text": "What is the output of this code? System.out.println(\"Hi!\")",
+            "type": "textResponse",
+            "correctAnswer": "",
+            "explanation": ""
+        },
+
+        
+        {
+            "questionId": 1,
+            "text": "Which data structure is best suited for implementing a LIFO (Last In, First Out) system?",
+            "type": "multipleChoice",
+            "options": [
+                "A. Queue",
+                "B. Stack",
+                "C. Array",
+                "D. Tree"
+            ],
+            "correctAnswer": "B. Stack",
+            "explanation": "A stack operates on the principle of Last In, First Out (LIFO)."
+        },
+        {
+            "questionId": 2,
+            "text": "In Python, what is the correct syntax for defining a function?",
+            "type": "multipleChoice",
+            "options": [
+                "A. function myFunction() {}",
+                "B. def myFunction():",
+                "C. create function myFunction()",
+                "D. func myFunction {}"
+            ],
+            "correctAnswer": "B. def myFunction():",
+            "explanation": "Python uses the 'def' keyword to define functions."
+        },
+        {
+            "questionId": 3,
+            "text": "What is the time complexity of a binary search algorithm?",
+            "type": "imgMultipleChoice",
+            "options": [
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Ball_python_lucy.JPG/640px-Ball_python_lucy.JPG",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdYmNMl7sIuE3_zekAtL60wRtW_FrodgeG8g&s",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3S9FqOWEjqGZPQ98L55jzxu9OXbJqwXx_Gw&s"
+            ],
+            "correctAnswer": 3,
+            "explanation": "This is the correct logo"
+        },
+        {
+            "questionId": 4,
+            "text": "Which of these languages is primarily used for web development?",
+            "type": "multipleChoice",
+            "options": [
+                "A. Python",
+                "B. HTML",
+                "C. Java",
+                "D. C++"
+            ],
+            "correctAnswer": "B. HTML",
+            "explanation": "HTML is a markup language used to create web pages."
+        },
+        {
+            "questionId": 5,
+            "text": "In object-oriented programming, what is 'inheritance'?",
+            "type": "multipleChoice",
+            "options": [
+                "A. A way to allocate memory dynamically",
+                "B. A mechanism by which one class acquires the properties of another",
+                "C. The process of defining a new class as an exact copy of another class",
+                "D. A way to store data in classes"
+            ],
+            "correctAnswer": "B. A mechanism by which one class acquires the properties of another",
+            "explanation": "Inheritance allows a class to inherit attributes and methods from another class."
+        },
+        {
+            "questionId": 6,
+            "text": "Which keyword in Java is used to create a new object?",
+            "type": "multipleChoice",
+            "options": [
+                "A. this",
+                "B. new",
+                "C. object",
+                "D. alloc"
+            ],
+            "correctAnswer": "B. new",
+            "explanation": "In Java, 'new' is used to instantiate objects."
+        },
+        {
+            "questionId": 7,
+            "text": "What is the primary purpose of the 'for' loop in programming?",
+            "type": "multipleChoice",
+            "options": [
+                "A. To execute code once",
+                "B. To execute code while a condition is true",
+                "C. To execute code a specific number of times",
+                "D. To execute code indefinitely"
+            ],
+            "correctAnswer": "C. To execute code a specific number of times",
+            "explanation": "The 'for' loop is often used when the number of iterations is known."
+        },
+        {
+            "questionId": 8,
+            "text": "Which of the following is a characteristic of a linked list?",
+            "type": "multipleChoice",
+            "options": [
+                "A. Fixed size",
+                "B. Random access",
+                "C. Sequential access",
+                "D. Static data structure"
+            ],
+            "correctAnswer": "C. Sequential access",
+            "explanation": "Linked lists allow sequential access to their elements."
+        },
+        {
+            "questionId": 9,
+            "text": "What does SQL stand for?",
+            "type": "multipleChoice",
+            "options": [
+                "A. Standard Query Language",
+                "B. Structured Query Language",
+                "C. Sequential Query Language",
+                "D. Syntax Query Language"
+            ],
+            "correctAnswer": "B. Structured Query Language",
+            "explanation": "SQL stands for Structured Query Language and is used for managing databases."
+        },
+        {
+            "questionId": 10,
+            "text": "Which sorting algorithm has the best average-case time complexity?",
+            "type": "multipleChoice",
+            "options": [
+                "A. Bubble sort",
+                "B. Insertion sort",
+                "C. Merge sort",
+                "D. Selection sort"
+            ],
+            "correctAnswer": "C. Merge sort",
+            "explanation": "Merge sort has an average-case time complexity of O(n log n), which is efficient compared to other algorithms listed."
+        },
+        {
+            "questionId": 11,
+            "text": "Which HTTP method is used to update a resource on the server?",
+            "type": "multipleChoice",
+            "options": [
+                "A. GET",
+                "B. POST",
+                "C. PUT",
+                "D. DELETE"
+            ],
+            "correctAnswer": "C. PUT",
+            "explanation": "The PUT method is commonly used to update a resource on the server."
+        },
+        {
+            "questionId": 12,
+            "text": "What will be the output of the following Python code: print(3 * 'hello')?",
+            "type": "multipleChoice",
+            "options": [
+                "A. hellohellohello",
+                "B. hello",
+                "C. 3hello",
+                "D. Error"
+            ],
+            "correctAnswer": "A. hellohellohello",
+            "explanation": "In Python, multiplying a string by a number repeats the string."
+        },
+        {
+            "questionId": 13,
+            "text": "Which of the following is NOT a primary function of an operating system?",
+            "type": "multipleChoice",
+            "options": [
+                "A. Process management",
+                "B. Network management",
+                "C. Memory management",
+                "D. Database management"
+            ],
+            "correctAnswer": "D. Database management",
+            "explanation": "Database management is not typically a function of the operating system."
+        },
+        {
+            "questionId": 14,
+            "text": "Which JavaScript method is used to remove the last element from an array?",
+            "type": "multipleChoice",
+            "options": [
+                "A. push()",
+                "B. pop()",
+                "C. shift()",
+                "D. splice()"
+            ],
+            "correctAnswer": "B. pop()",
+            "explanation": "The pop() method removes the last element from an array."
+        },
+        {
+            "questionId": 15,
+            "text": "Which keyword is used in C++ to prevent a variable's value from being modified?",
+            "type": "multipleChoice",
+            "options": [
+                "A. static",
+                "B. const",
+                "C. final",
+                "D. volatile"
+            ],
+            "correctAnswer": "B. const",
+            "explanation": "The 'const' keyword in C++ prevents modification of a variable's value after it is set."
+        },
+        {
+            "questionId": 1,
+            "text": "What data structure uses LIFO (Last In, First Out) order?",
+            "type": "textResponse",
+            "correctAnswer": "Stack",
+            "explanation": "A stack follows the Last In, First Out principle."
+        },
+        {
+            "questionId": 2,
+            "text": "What keyword in Python is used to define a function?",
+            "type": "textResponse",
+            "correctAnswer": "def",
+            "explanation": "The 'def' keyword is used to declare functions in Python."
+        },
+        {
+            "questionId": 3,
+            "text": "What is the time complexity of binary search in Big O notation?",
+            "type": "textResponse",
+            "correctAnswer": "O(log n)",
+            "explanation": "Binary search operates with a time complexity of O(log n)."
+        },
+        {
+            "questionId": 4,
+            "text": "Which programming language is known for use in web browsers?",
+            "type": "textResponse",
+            "correctAnswer": "JavaScript",
+            "explanation": "JavaScript is widely used for client-side web development."
+        },
+        {
+            "questionId": 5,
+            "text": "What keyword in Java is used to create an instance of an object?",
+            "type": "textResponse",
+            "correctAnswer": "new",
+            "explanation": "The 'new' keyword in Java is used to instantiate objects."
+        },
+        {
+            "questionId": 6,
+            "text": "Which sorting algorithm has the best average-case time complexity?",
+            "type": "textResponse",
+            "correctAnswer": "MergeSort",
+            "explanation": "MergeSort has an average time complexity of O(n log n)."
+        },
+        {
+            "questionId": 7,
+            "text": "Which keyword is used to prevent modification of a variable in C++?",
+            "type": "textResponse",
+            "correctAnswer": "const",
+            "explanation": "The 'const' keyword in C++ prevents a variable from being modified."
+        },
+        {
+            "questionId": 8,
+            "text": "What protocol is commonly used to transfer web pages?",
+            "type": "textResponse",
+            "correctAnswer": "HTTP",
+            "explanation": "HTTP, or HyperText Transfer Protocol, is used to transfer web pages."
+        },
+        {
+            "questionId": 9,
+            "text": "What symbol is used to comment a line in Python?",
+            "type": "textResponse",
+            "correctAnswer": "#",
+            "explanation": "The '#' symbol is used for single-line comments in Python."
+        },
+        {
+            "questionId": 10,
+            "text": "What acronym represents a type of unique identifier in databases?",
+            "type": "textResponse",
+            "correctAnswer": "UUID",
+            "explanation": "UUID stands for Universally Unique Identifier, commonly used in databases."
+        },
+        {
+            "questionId": 11,
+            "text": "What is the term for a blueprint of an object in OOP?",
+            "type": "textResponse",
+            "correctAnswer": "Class",
+            "explanation": "A class defines the structure and behavior of objects in object-oriented programming."
+        },
+        {
+            "questionId": 12,
+            "text": "What keyword is used in Java to inherit from a superclass?",
+            "type": "textResponse",
+            "correctAnswer": "extends",
+            "explanation": "The 'extends' keyword in Java indicates that a class is inheriting from a superclass."
+        },
+        {
+            "questionId": 13,
+            "text": "What data type represents true or false values?",
+            "type": "textResponse",
+            "correctAnswer": "Boolean",
+            "explanation": "The Boolean data type is used in SQL to store true or false values."
+        }
+    
+    ]
+}
