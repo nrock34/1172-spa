@@ -21,8 +21,10 @@ question_json_example = {
 const jsonServerUrl = 'https://my-json-server.typicode.com/nrock34/1172-spa/questions'
 const quizLength = 15
 let firstFetch = true
-let idsUsed = [0, 5, 9]
+let idsUsed = [0, 9]
 let total
+let quizOver = false
+let inFeedback = false
 
 //FETCH QUESTION
 //  asyncronous function called to get question for specific id
@@ -42,7 +44,7 @@ async function fetchQuestion(questiondId) {
         console.log(randomId)
     }
     
-    const response = await fetch(jsonServerUrl+"/"+5);
+    const response = await fetch(jsonServerUrl+"/"+randomId);
     idsUsed.push(randomId);
     const question = await response.json();
 
@@ -59,6 +61,9 @@ function renderWelcomeScreen() {
     const html = temp();
 
     document.getElementById('app').innerHTML = html;
+
+    inFeedback = true
+    quizOver = false
 
 }
 
@@ -88,6 +93,7 @@ async function renderQuizView(data) {
     const html = temp(ctx);
 
     document.getElementById('app').innerHTML = html;
+    inFeedback = false
 
     setupAnswerHandlers(question, data);
 
@@ -117,6 +123,7 @@ function renderFeedbackView(question, answer, data, correct) {
     const temp = Handlebars.compile(src);
     const html = temp(ctx)
 
+    inFeedback = true
     document.getElementById('app').innerHTML = html;
 
 }
@@ -126,6 +133,11 @@ function renderFeedbackView(question, answer, data, correct) {
 
 function renderEndScreen(data) {
 
+    curTime = (Math.floor(Date.now() / 1000) - data.timeStarted) - data.timeInFeedback
+
+    timeMin = Math.floor(curTime / 60)
+    timeSecs = curTime % 60
+
     const score = Math.floor((data.questionsCorrect / data.questionsAnswered) * 100);
     const ctx = {
         name: data.name,
@@ -133,7 +145,7 @@ function renderEndScreen(data) {
         passed: score >= 80,
         questionsCorrect: data.questionsCorrect,
         questionsAnswered: data.questionsAnswered,
-        elapsedTime: (Math.floor(Date.now() / 1000) - data.timeStarted) - data.timeInFeedback, 
+        elapsedTime: timeMin + ":" + (timeSecs < 10 ? "0" : "") + timeSecs, 
 
     }
 
@@ -143,6 +155,29 @@ function renderEndScreen(data) {
 
     document.getElementById('app').innerHTML = html;
 
+    quizOver = true
+
+}
+
+
+function renderTimeElapsed(data) {
+
+    curTime = Math.floor(Date.now() / 1000) - data.timeStarted;
+
+    curTime -= data.timeInFeedback
+
+    timeMin = Math.floor(curTime / 60)
+    timeSecs = curTime % 60
+
+    ctx = {
+        time: timeMin + ":" + (timeSecs < 10 ? "0" : "") + timeSecs
+    }
+
+    const src = document.getElementById('elapsed-time-template').innerHTML;
+    const temp = Handlebars.compile(src)
+    const html = temp(ctx)
+
+    document.getElementById('time-passed').innerHTML = html;
 }
 
 
@@ -151,6 +186,7 @@ function renderEndScreen(data) {
 
 function setupAnswerHandlers(question, data) {
 
+    String.low
     console.log(question.type)
     if (question.type === "multipleChoice") {
         document.querySelectorAll('.answer-option').forEach(
@@ -189,44 +225,40 @@ function setupAnswerHandlers(question, data) {
 
 function checkAnswer(userAnswer, correctAnswer, data, question) {
 
-    if (userAnswer === correctAnswer) {
+    if (question.type === "imgMultipleChoice" ? Number(userAnswer) === Number(correctAnswer) : userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
 
         renderFeedbackView(question, userAnswer, data, true)
         data.questionsAnswered++;
         data.questionsCorrect++;
         setTimeout(() => {
             data.onQuestionNum++;
-            data.timeInFeedback += 3;
+            data.timeInFeedback += 1;
             if (data.questionsAnswered >= quizLength) {
                 renderEndScreen(data)
             } else {
                 renderQuizView(data)
             }
             
-        }, 3000)
+        }, 1000)
 
     } else {
 
         renderFeedbackView(question, userAnswer, data, false)
         data.questionsAnswered++;
-        setTimeout(() => {
+        feedbackStartedTime = Math.floor(Date.now() / 1000);
+
+        document.getElementById('next-question').addEventListener('click', () => {
             data.onQuestionNum++;
-            data.timeInFeedback += 5;
+            feedbackEndedTime = Math.floor(Date.now() / 1000);
+            data.timeInFeedback += feedbackEndedTime - feedbackStartedTime;
             if (data.questionsAnswered >= quizLength) {
                 renderEndScreen(data)
             } else {
                 renderQuizView(data)
             }
-            
-        }, 5000)
-
+        })
     }
-
-    
-
 } 
-
-
 
 document.addEventListener('submit', (e) => {
 
@@ -236,7 +268,9 @@ document.addEventListener('submit', (e) => {
             const userName = document.getElementById('name-field').value;
             const agreeBox = document.getElementById('agree-field').checked;
 
-            renderQuizView({
+            quizOver = false
+
+            data = {
                 name: userName,
                 agree: agreeBox,
                 onQuestionNum: 1,
@@ -244,7 +278,16 @@ document.addEventListener('submit', (e) => {
                 questionsCorrect: 0,
                 timeStarted: Math.floor(Date.now() / 1000),
                 timeInFeedback: 0,
-                })
+            }
+            renderQuizView(data)
+            setInterval(() => {
+                if (quizOver) {
+                    document.getElementById('time-passed').innerHTML = "";
+                } else if (!inFeedback) {
+                    renderTimeElapsed(data)
+                }
+            }, 100)
+            
 
         }
     }   
@@ -253,3 +296,5 @@ document.addEventListener('submit', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     renderWelcomeScreen();
 });
+
+

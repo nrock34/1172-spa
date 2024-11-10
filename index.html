@@ -24,12 +24,12 @@
                         <div class="card p-4 shadow">
                             <div class="form-group text-center">
                                 <h2 class="text-center">
-                                    Quiz
+                                    Computer Science Quiz
                                 </h2>
                             </div>
                             <div class="text-center">
-                                <p>
-                                    Fill out before you begin:
+                                <p class="font-weight-bold text-muted"> 
+                                    Please fill out before you begin:
                                 </p>
                             </div>
                             <div class="form-group col-md">
@@ -82,7 +82,7 @@
                                 <div class="form-group justify-content-center">
                                 {{#each options}}
                                     <button class="img-answer-option m-3">
-                                        <img width="100px" height="100px" src="{{this.imgUrl}}" id="this.answerId">
+                                        <img width="100px" height="100px" src="{{this.imgUrl}}" id="{{this.answerId}}">
                                     </button>
                                 {{/each}}
                                 </div>
@@ -134,6 +134,8 @@
                     <p>
                         Explanation: {{explanation}}
                     </p>
+
+                    <button id="next-question" class="btn btn-primary mt-3">Got It!</button>
                 {{/if}}
                 </div>
             </div>
@@ -143,11 +145,11 @@
             <div id="end-screen" class="container mt-5 text-center">
                 <div class="card p-4 shadow-lg">
                     {{#if passed}}
-                        <h2>
+                        <h2 class="text-success">
                             Congratulations {{name}}! You passed the quiz!
                         </h2>
                     {{else}}
-                        <h2>
+                        <h2 class="text-danger">
                             Sorry {{name}}, you didn't pass the quiz. Study hard and try retaking it!
                         </h2>
                     {{/if}}
@@ -164,10 +166,21 @@
             </div>
         </script>
 
-        <div class="container" id="app">
-            <input type="checkbox">
-                ruh roe :(
-            </input>
+        <script id="elapsed-time-template" type="text/x-handlebars-template">
+            <div class="m-3" id="elapsed-time-screen">
+                Time Elapsed: {{time}}
+            </div>
+        </script>
+
+        <div class="container">
+            <div id="app">
+               <input type="checkbox">
+                    ruh roe :(
+                </input> 
+            </div>
+            <div class="text-center" id="time-passed">
+
+            </div>
         </div>
 
 
