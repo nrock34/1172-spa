@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+    </head>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script>
+            // compile the template
+            var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+            // execute the compiled template and print the output to the console
+            console.log(template({ doesWhat: "rocks!" }));
+        </script>
+
+
+
+        <script id="welcome-screen-template" type="text/x-handlebars-template">
+            <div id="welcome-screen" class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card p-4 shadow">
+                            <div class="form-group text-center">
+                                <h2 class="text-center">
+                                    Computer Science Quiz
+                                </h2>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-weight-bold text-muted"> 
+                                    Please fill out before you begin:
+                                </p>
+                            </div>
+                            <div class="form-group col-md">
+                                <form id="start-quiz-form">
+                                    <label for="name-feild">
+                                        Enter Name:
+                                    </label>
+                                    <input class="form-control" type="text" id="name-field" required>
+                                    <label for="agree-feild">By checking this, you agree to not cheat.</label>
+                                    <input class="form-control" type="checkbox" id="agree-field" required>
+                                    <button class="btn btn-primary btn-block" type="submit">Begin Quiz</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </script>
+
+        <script id="quiz-template" type="text/x-handlebars-template">
+            <div id="quiz-screen" class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card p-4 shadow">
+                            <h2 class="text-center">
+                                Name: {{name}} 
+                            </h2>
+                            <h2 class="text-center">
+                                Quiz - Question #{{onQuestionNum}}
+                            </h2>
+                                
+                            
+                            <p class="text-center">{{questionText}}</p>
+            
+                            {{#if multipleChoice}}
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    {{#each options}}
+                                        <button class="answer-option btn btn-outline-primary m-2">{{this}}</button>
+                                    {{/each}}
+                                </div>   
+                            {{/if}}
+                            {{#if textResponse}}
+                                <div class="form-group">
+                                    <input type="text" id="text-answer" class="form-control"/>
+                                    <button id="submit-answer" class="btn btn-primary mt-3">Submit</button>
+                                </div>
+                            {{/if}}
+                            {{#if imgMultipleChoice}}
+                                <div class="form-group justify-content-center">
+                                {{#each options}}
+                                    <button class="img-answer-option m-3">
+                                        <img width="100px" height="100px" src="{{this.imgUrl}}" id="{{this.answerId}}">
+                                    </button>
+                                {{/each}}
+                                </div>
+                            {{/if}} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script id="feedback-template" type="text/x-handlebars-template">
+            <div id="feedback-screen" class="container mt-5 text-center">
+                <h2>
+                    Name: {{name}} - Quiz: Question #{{onQuestionNum}}
+                </h2>
+                <p>{{questionText}}</p>
+
+                <div class="alert alert-{{#if rightAnswer}}success{{else}}danger{{/if}} shadow">
+                {{#if rightAnswer}}
+                    <h3>
+                        CORRECT ANSWER!!
+                    </h3>
+                    <div>
+                        <p>
+                          Your Answer: {{userAnswer}}
+                        </p>
+                        {{#if imgMultipleChoice}}
+                            <img src="{{correctimgurl}}">
+                        {{/if}}
+                    </div>
+                    <p>
+                        Explanation: {{explanation}}
+                    </p>
+                {{else}}
+                    <h3>
+                        WRONG ANSWER!!
+                    </h3>
+                    <div>
+                        <p>
+                        Your Answer: {{userAnswer}}
+                        </p>
+                        <p>
+                        Correct Answer: {{correctAnswer}}
+                        </p>
+                        {{#if imgMultipleChoice}}
+                            <img src="{{correctimgurl}}">
+                        {{/if}}
+                    </div>
+                    <p>
+                        Explanation: {{explanation}}
+                    </p>
+
+                    <button id="next-question" class="btn btn-primary mt-3">Got It!</button>
+                {{/if}}
+                </div>
+            </div>
+        </script>
+
+        <script id="end-screen-template" type="text/x-handlebars-template">
+            <div id="end-screen" class="container mt-5 text-center">
+                <div class="card p-4 shadow-lg">
+                    {{#if passed}}
+                        <h2 class="text-success">
+                            Congratulations {{name}}! You passed the quiz!
+                        </h2>
+                    {{else}}
+                        <h2 class="text-danger">
+                            Sorry {{name}}, you didn't pass the quiz. Study hard and try retaking it!
+                        </h2>
+                    {{/if}}
+                    
+                    <div>
+                        <h2>
+                            Your Score: <span class="font-weight-bold">{{score}}%</span>  
+                        </h2>
+                        <h3>
+                            Time Taken: <span class="font-weight-bold">{{elapsedTime}} seconds</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script id="elapsed-time-template" type="text/x-handlebars-template">
+            <div class="m-3" id="elapsed-time-screen">
+                Time Elapsed: {{time}}
+            </div>
+        </script>
+
+        <div class="container">
+            <div id="app">
+               <input type="checkbox">
+                    ruh roe :(
+                </input> 
+            </div>
+            <div class="text-center" id="time-passed">
+
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
